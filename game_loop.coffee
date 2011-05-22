@@ -20,7 +20,7 @@ class GameLoop
 	
 		KEY_SPACE   = 32
 	
-		if (e.keyCode == KEY_SPACE) 
+		if (e.keyCode == KEY_SPACE || e.charCode == KEY_SPACE) 
 			@playField.drop()
 			@canvas.renderPlayField(@playField)
 
@@ -57,8 +57,8 @@ class GameLoop
 		setTimeout(run, 500)
 
 CanvasTetris = () ->
-	window.addEventListener "load", () ->
-		new GameLoop(new CanvasRenderer(document.getElementById('canvas')))
+	load = () -> new GameLoop(new CanvasRenderer(document.getElementById('canvas')))
+	window.addEventListener "load", load, false
 
 window.CanvasTetris = CanvasTetris
 
