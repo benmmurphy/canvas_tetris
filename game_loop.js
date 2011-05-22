@@ -27,7 +27,7 @@
         return;
       }
       KEY_SPACE = 32;
-      if (e.keyCode === KEY_SPACE) {
+      if (e.keyCode === KEY_SPACE || e.charCode === KEY_SPACE) {
         this.playField.drop();
         return this.canvas.renderPlayField(this.playField);
       }
@@ -71,9 +71,11 @@
     return GameLoop;
   })();
   CanvasTetris = function() {
-    return window.addEventListener("load", function() {
+    var load;
+    load = function() {
       return new GameLoop(new CanvasRenderer(document.getElementById('canvas')));
-    });
+    };
+    return window.addEventListener("load", load, false);
   };
   window.CanvasTetris = CanvasTetris;
 }).call(this);
