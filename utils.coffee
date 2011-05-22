@@ -13,18 +13,18 @@ shuffle = (array) ->
     return array
 
 makeMatrix = (rows, cols, val) ->
-	arr = new Array(rows);
+	arr = new Array(rows)
 	for i in [0...rows]
-		arr[i] = makeRow(cols, val);
+		arr[i] = makeRow(cols, val)
 	
 	return arr
 
 makeRow = (size, val)  ->
-	arr = new Array(size);
+	arr = new Array(size)
 	for i in [0...size]
-		arr[i] = val;
+		arr[i] = val
 	
-	return arr;
+	return arr
 
 window.shuffle = shuffle
 window.makeRow = makeRow

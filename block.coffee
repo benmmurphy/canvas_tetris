@@ -29,13 +29,13 @@ class Block
 Block.ROTATION_SIZE = 4
 Block.ROTATIONS = 4
 
-Block.I = 0;
-Block.J = 1;
-Block.L = 2;
-Block.O = 3;
-Block.S = 4;
-Block.T = 5;
-Block.Z = 6;
+Block.I = 0
+Block.J = 1
+Block.L = 2
+Block.O = 3
+Block.S = 4
+Block.T = 5
+Block.Z = 6
 
 Block.blocks = [
           [[0, 0, 0, 0,
