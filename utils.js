@@ -12,8 +12,8 @@
         array[current] = array[top];
         array[top] = tmp;
       }
-      return array;
     }
+    return array;
   };
   makeMatrix = function(rows, cols, val) {
     var arr, i;
