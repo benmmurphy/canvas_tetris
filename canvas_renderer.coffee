@@ -69,7 +69,8 @@ class CanvasRenderer
     drawBlock : (blockIdx, row, col) ->
         if (row < 0) 
             return
-        @ctx.drawImage(@image, @images[blockIdx], 0, @block_size, @block_size, col * @block_size, row * @block_size, @block_size, @block_size)
+        if @image.complete
+          @ctx.drawImage(@image, @images[blockIdx], 0, @block_size, @block_size, col * @block_size, row * @block_size, @block_size, @block_size)
 
     renderPlayField : (playField) ->
         @ctx = @canvas.getContext('2d')
